@@ -33,7 +33,7 @@ export async function DELETE(request, {params}) {
 //Update Task
 export async function PUT(request, {params}) {
     let id = params.Taskid
-    const {title,content,status} = request.json()
+    const {title,content,status} =await request.json()
     try {
       await mongoConnect();
       let data = await taskModel.findOne({_id: id });

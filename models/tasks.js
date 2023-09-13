@@ -6,7 +6,7 @@ const taskSchema=new mongoose.Schema({
     addedData:{type:Date,default:Date.now()},
     status:{type:String,enum:['pending','completed'],default:'pending'},
     userId:{type:mongoose.Schema.ObjectId,require:true}
-})
+},{timestamps:true})
   export const taskModel = mongoose.models.taskModel || mongoose.model("taskModel", taskSchema);
 
 
