@@ -1,0 +1,39 @@
+// import { mongoConnect } from '@/helper/MongoDb'
+
+// mongoConnect()
+// export async function GET(req,{params}){
+//     const url =new URL(req.url)
+//     console.log(url.searchParams.get('a'),"aman")
+//     try {
+
+//         console.log(params)
+        
+//     } catch (error) {
+        
+//     }
+// }
+
+
+
+
+export async function DELETE(req,{params}){
+    // await mongoConnect()
+    console.log("aman")
+// try {
+//     let id=params.usersId
+//     let user=await useModel.findOne({_id:id})
+//     if(!user){return NextResponse.json({status:false,message:'Wrong Param Id'},{status:404})}
+//     await useModel.findByIdAndDelete(id)
+//     return NextResponse.json({status:true,message:'User Deleted'},{status:200})
+    
+// } catch (error) {
+//     return NextResponse.json(
+//       {
+//         status: false,
+//         message: "Error",
+//         data: error.message,
+//       },
+//       { status: 500 }
+//     );
+//   }
+}
