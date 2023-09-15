@@ -5,7 +5,7 @@ export const metadata = {
 export default function Home() {
   
   return (
-    <div className=" min-h-[58vh]">
+    <div className="min-h-[72vh]  ">
   
       Aman Kashyapa
      
