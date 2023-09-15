@@ -6,7 +6,15 @@ export async function POST(req) {
   try {
    await mongoConnect()
     let { name, email, password, about, profileURL } = await req.json();
-
+console.log(name, email, password, about, profileURL )
+const olduser=await useModel.findOne({email:email})
+if (olduser){return NextResponse.json(
+  {
+    status: false,
+    message: "Email Already used",
+  },
+  { status: 201 }
+)}
     let newUser = await useModel.create({
       name: name,
       email: email,
@@ -17,7 +25,7 @@ export async function POST(req) {
     return NextResponse.json(
       {
         status: true,
-        message: "created",
+        message: "Register done",
         data: newUser,
       },
       { status: 201 }

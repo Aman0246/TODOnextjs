@@ -18,8 +18,9 @@ export default function Header() {
       </div>
       <div>
       <ul className='flex space-x-4'>
-            <li><a href="/">Login</a></li>
-            <li><a href="/">SignUp</a></li>
+            <li><a href="/Login">Login</a></li>
+      <Link href="/Signup"><motion.div whileTap={{scale:0.9}}>SignUp</motion.div></Link>
+            
             <AccountCircleIcon/>
         </ul>
       </div>
